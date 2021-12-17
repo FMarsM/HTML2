@@ -16,6 +16,11 @@ background-color: yellow;
 font-style:italic;
 color:blue;
         }
+        OL {
+font-size: 3ch;
+background-color: cornflowerblue;
+font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -25,6 +30,7 @@ color:blue;
     <input type="text" id="UserInput">
     <button id="button1">Vvedite stepen treugolnika</button>
     <!-- <input type="button"value="Введите степень треугольника"></input> -->
+    <ul id="ul1"></ul>
 <script>
     button1.onclick = function func()
     {
@@ -37,6 +43,7 @@ color:blue;
         {
             let c = 1;
             cLine = "1"
+            let li = document.createElement('li')
 
             for (let q = 0; q < +n - y; q++)
                 {
@@ -51,10 +58,11 @@ color:blue;
                 }
             }
             allLines = allLines+`\n${cLine}`
-            
+            li.innerHTML=`${cLine}`;
+            ul1.append(li)
+
         }
-        document.body.append(allLines);
-        document.getElementById("div1").innerHTML=`${allLines}<br>`;
+
         
     }
 
