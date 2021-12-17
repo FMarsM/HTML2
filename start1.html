@@ -16,7 +16,7 @@ background-color: yellow;
 font-style:italic;
 color:blue;
         }
-        UL {
+        div2 {
 font-size: 3ch;
 background-color: cornflowerblue;
 font-style: italic;
@@ -28,14 +28,12 @@ font-style: italic;
 <div id="div1">
     <p  class="s1">Текст проверка<br>Проверка разрыва строки<br><i><strong>Жирный курсив</strong><br>Просто курсив</i></p>
     <input type="text" id="UserInput">
-    <button id="button1">Vvedite stepen treugolnika</button>
-    <!-- <input type="button"value="Введите степень треугольника"></input> -->
+    <button id="button1">Введите степень треугольника</button>
     <ul id="ul1"></ul>
 <script>
     button1.onclick = function func()
     {
     let n = document.getElementById("UserInput").value;
-    /* let div = document.createElement("div1"); */
     let cLine
     let allLines =''
 
@@ -43,7 +41,7 @@ font-style: italic;
         {
             let c = 1;
             cLine = "1"
-            let li = document.createElement('li')
+            let divv = document.createElement('div')
 
             for (let q = 0; q < +n - y; q++)
                 {
@@ -58,8 +56,8 @@ font-style: italic;
                 }
             }
             allLines = allLines+`\n${cLine}`
-            li.innerHTML=`${cLine}`;
-            ul1.append(li)
+            divv.innerHTML=`${cLine}`;
+            div2.append(divv)
 
         }
 
