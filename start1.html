@@ -20,38 +20,25 @@ color:blue;
 </head>
 <body>
     <h1>Pascal Triangle</h1>
-    <!-- <script>
-        let n = prompt("Введите степень треугольника", '')
-        for ( let y = 0; y < n; y++)
-            {
-                let c = 1;
-                let cLine = "1"
-                for (let x = 0; x <= y; x++)
-                {
-                    c = c * (y - x) / (x + 1);
-                    if (c !=0)
-                    {
-                        cLine =cLine+ ` ${c}`
-                    }
-                    
-                }
-                alert(cLine);
-                
-            }
-    </script> -->
-<div>
+<div id="div1">
     <p  class="s1">Текст проверка<br>Проверка разрыва строки<br><i><strong>Жирный курсив</strong><br>Просто курсив</i></p>
+    <input type="text" id="UserInput">
+    <button id="button1">Vvedite stepen treugolnika</button>
+    <!-- <input type="button"value="Введите степень треугольника"></input> -->
 <script>
-    let n = prompt("Введите степень треугольника", '')
+    button1.onclick = function func()
+    {
+    let n = document.getElementById("UserInput").value;
+    /* let div = document.createElement("div1"); */
     let cLine
     let allLines =''
 
-    for ( let y = 0; y < n; y++)
+    for ( let y = 0; y < +n; y++)
         {
             let c = 1;
             cLine = "1"
 
-            for (let q = 0; q < n - y; q++)
+            for (let q = 0; q < +n - y; q++)
                 {
                     cLine="  "+cLine
                 }
@@ -64,11 +51,16 @@ color:blue;
                 }
             }
             allLines = allLines+`\n${cLine}`
+
         }
-        //document.write(allLines)
-        alert(allLines)
+        /* body.append(allLines); */
+        document.getElementById(div2).innerHTML=allLines;
+        
+        alert("123");
+    }
+
 </script>
-<p1></p1>
+<p1 id="div2"></p1>
 </div>
 </body>
 </html>
