@@ -51,12 +51,11 @@ color:blue;
                 }
             }
             allLines = allLines+`\n${cLine}`
-
+            
         }
-        /* body.append(allLines); */
-        document.getElementById(div2).innerHTML=allLines;
+        document.body.append(allLines);
+        document.getElementById("div1").innerHTML=`${allLines}<br>`;
         
-        alert("123");
     }
 
 </script>
